@@ -7,7 +7,8 @@
 int main()
 {
     std::array<Zoombini, 16> zoombinis;
-
+	
+	zoombinis[0].eyes 
     std::cout << "Hello World!\n";
 }
 
