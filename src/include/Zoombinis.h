@@ -5,12 +5,17 @@
 class Zoombini
 {
 public:
+	// Returns the number of similarities between this and another Zoombini.
+	int Compare(const Zoombini & other);
+
 	int hair = 0;
 	int eyes = 0;
 	int nose = 0;
 	int loco = 0;
-	
-	
+	int row = 0;
+	int col = 0;
+
+
 };
 class ZoombiniGroup
 {
@@ -20,4 +25,13 @@ public:
 	int column = 0;
 
 
+};
+class BayouBoat
+{
+public:
+	void RandomPlace();
+	bool IsValidPlacement();
+
+	std::array<ZoombiniGroup, 16> groupman;
+	std::vector<Zoombini> bzoombinis(625);
 };
