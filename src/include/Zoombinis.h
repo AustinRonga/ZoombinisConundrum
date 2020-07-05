@@ -5,6 +5,9 @@
 class Zoombini
 {
 public:
+    // Returns the number of similarities between this and another Zoombini.
+    int Compare(const Zoombini & other);
+
 	int hair = 0;
 	int eyes = 0;
 	int nose = 0;
