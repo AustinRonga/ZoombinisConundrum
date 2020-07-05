@@ -5,6 +5,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <ctime>
+#include <vector>
 
 int main()
 {
@@ -20,7 +21,7 @@ int main()
 	int p = 0;
 	int s = 0;
 
-	std::array<Zoombini, 625> zoombinis;
+	std::vector<Zoombini> zoombinis(625);
 	std::array<ZoombiniGroup, 16> groupman;
 	
 
