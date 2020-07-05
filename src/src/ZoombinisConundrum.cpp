@@ -21,16 +21,10 @@ int main()
 	int p = 0;
 	int s = 0;
 
-<<<<<<< HEAD
-	std::array<Zoombini, 625> zoombinis;
+	std::vector<Zoombini> zoombinis(625);
 	BayouBoat boat;
 	//std::array<ZoombiniGroup, 16> boat.groupman;
 
-=======
-	std::vector<Zoombini> zoombinis(625);
-	std::array<ZoombiniGroup, 16> groupman;
-	
->>>>>>> 3344fa526409a79e05bd679f63a0e31889fe1c5c
 
 	// zoombinis[0].eyes (Zoombini #1, Eye Feature)
 	zoombinis[n].eyes = a;
@@ -103,10 +97,11 @@ int main()
 
 	}
 
-	for (int q = 0; q < 16; q++)
+
+	/*for (int q = 0; q < 16; q++)
 	{
 		boat.bzoombinis[q] = zoombinis[boat.groupman[q].identity];
-	}
+	}*/
 
 	int simils = 0;
 	int eyecheck = 0;
@@ -117,44 +112,9 @@ int main()
 	for (int v = 0; v < 16; v++) {
 		for (int w = 0; w < 16; w++) {
 
-<<<<<<< HEAD
 			int simils = boat.bzoombinis[v].Compare(boat.bzoombinis[w]);
 
 
-=======
-			//if (zoombinis[v].eyes == zoombinis[w].eyes) {
-			//	eyecheck = 1;
-			//}
-			//else { eyecheck = 0; }
-
-			//if (zoombinis[v].hair == zoombinis[w].hair) {
-			//	haircheck = 1;
-			//}
-			//else { haircheck = 0; }
-			////else { simils = 0; }
-			//if (zoombinis[v].nose == zoombinis[w].nose) {
-			//	nosecheck = 1;
-			//}
-			//else { nosecheck = 0; }
-			//
-			////else { simils = 0; }
-			//if (zoombinis[v].loco == zoombinis[w].loco) {
-			//	lococheck = 1;
-			//}
-			//else { lococheck = 0; }
-			//	//std::cout << "Similarities between " << v + 1 << " and " << w + 1 << ": " << simils << "\n";
-
-			//	 
-			//
-			//simils = eyecheck + haircheck + nosecheck + lococheck;
-		    int simils = zoombinis[v].Compare(zoombinis[w]);
-
-			 std::cout << "Similarities between " << v+1 << " and " << w+1 << ": " << simils<< "\n";
-			 //std::cout << "Eyes " << eyecheck << ". Nose " << nosecheck << ". Hair " << haircheck << ". Loco " << lococheck << ".\n";
-			 //simils = 0;
-			 //eyecheck = 0; haircheck = 0; nosecheck = 0; lococheck = 0;
-			
->>>>>>> 3344fa526409a79e05bd679f63a0e31889fe1c5c
 		}
 		std::cout << "\nNext Zoombini \n";
 
