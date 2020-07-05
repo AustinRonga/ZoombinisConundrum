@@ -105,29 +105,29 @@ int main()
 	for (int v = 0; v < 16; v++) {
 		for (int w = 0; w < 16; w++) {
 
-			if (zoombinis[w].eyes == zoombinis[v].eyes) {
+			if (zoombinis[v].eyes == zoombinis[w].eyes) {
 				eyecheck = 1;
 			}
 			else { eyecheck = 0; }
 
-			if (zoombinis[w].hair == zoombinis[v].hair) {
+			if (zoombinis[v].hair == zoombinis[w].hair) {
 				haircheck = 1;
 			}
 			else { haircheck = 0; }
 			//else { simils = 0; }
-			if (zoombinis[w].nose == zoombinis[v].nose) {
+			if (zoombinis[v].nose == zoombinis[w].nose) {
 				nosecheck = 1;
 			}
 			else { nosecheck = 0; }
 			
 			//else { simils = 0; }
-			if (zoombinis[w].loco == zoombinis[v].loco) {
+			if (zoombinis[v].loco == zoombinis[w].loco) {
 				lococheck = 1;
 			}
 			else { lococheck = 0; }
 				//std::cout << "Similarities between " << v + 1 << " and " << w + 1 << ": " << simils << "\n";
 
-
+				 
 			
 			simils = eyecheck + haircheck + nosecheck + lococheck;
 		
@@ -137,7 +137,7 @@ int main()
 			 eyecheck = 0; haircheck = 0; nosecheck = 0; lococheck = 0;
 			
 		}
-		std::cout << "\n Next Zoombini \n";
+		std::cout << "\nNext Zoombini \n";
 
 	}
 
