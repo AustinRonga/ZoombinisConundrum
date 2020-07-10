@@ -13,9 +13,9 @@ public:
 	int eyes = 0;
 	int nose = 0;
 	int loco = 0;
-	//int row = 0;
-	//int col = 0;
-	//int ident = 0;
+	int row = 0;
+	int col = 0;
+	int ident = 0;
 
 
 };
@@ -33,7 +33,7 @@ class BayouBoat
 public:
     BayouBoat();
 
-	void RandomPlace(Zoombini);
+	void RandomPlace();
 	bool IsValidPlacement();
 
 	std::array<ZoombiniGroup, 16> groupman;

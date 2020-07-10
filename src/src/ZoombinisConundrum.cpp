@@ -92,22 +92,21 @@ int main()
 		}
 		s = boat.groupman[q].identity;
 
+	
 
 		std::cout << "Member " << (q + 1) << ": Zoombini " << boat.groupman[q].identity << " (Features: " << zoombinis[s].eyes << ", " << zoombinis[s].hair << ", " << zoombinis[s].nose << ", " << zoombinis[s].loco << ") \n";
 
 	}
 
 
-	/*for (int q = 0; q < 16; q++)
+	for (int q = 0; q < 16; q++)
 	{
 		boat.bzoombinis[q] = zoombinis[boat.groupman[q].identity];
-	}*/
+		boat.bzoombinis[q].ident = boat.groupman[q].identity;
+	}
 
 	int simils = 0;
-	int eyecheck = 0;
-	int nosecheck = 0;
-	int haircheck = 0;
-	int lococheck = 0;
+
 	int comps = 0;
 	for (int v = 0; v < 16; v++) {
 		for (int w = 0; w < 16; w++) {
@@ -119,6 +118,8 @@ int main()
 		std::cout << "\nNext Zoombini \n";
 
 	}
+	
+	boat.RandomPlace();
 
 	std::cout << "Hello World!\n";
 }

@@ -2,6 +2,8 @@
 
 #include <iostream>
 #include <ctime>
+#include <algorithm>
+
 
 int Zoombini::Compare(const Zoombini & other)
 {
@@ -21,30 +23,37 @@ int Zoombini::Compare(const Zoombini & other)
 	return simils;
 }
 
-//void BayouBoat::RandomPlace(Zoombini) 
-//{
-//	for (int a = 0; a < 17; a++)
-//	{
-//		srand(time(0));
-//
-//		bzoombinis[a].row = ((rand()%2)+1);
-//		bzoombinis[a].col = ((rand() % 8)+1);
-//		for (int b = 0; b < a; b++) {
-//			safetycheck:
-//			if (bzoombinis[a].row == bzoombinis[b].row && bzoombinis[a].col == bzoombinis[b].col) {
-//				bzoombinis[a].row = ((rand() % 2) + 1);
-//				bzoombinis[a].col = ((rand() % 8) + 1);
-//			}
-//			else
-//			{
-//				std::cout << "Zoombini G" << a << " Z";
-//				b++;
-//			}
-//			goto safetycheck;
-//
-//		}
-//	}
-//}
+void BayouBoat::RandomPlace() 
+{
+
+
+	 std::array<std::array<int,2>,16> positions;
+	 for (int row = 0; row < 8; row++)
+	 {
+		 for (int col = 0; col < 2; col++)
+		 {
+			 positions[col * 8 + row][0] = col;
+			 positions[col * 8 + row][1] = row;
+		 }
+	 }
+
+	 std::vector<int> assignments(16);
+
+	 for (int c = 0; c < 16; c++)
+	 {
+		 assignments[c] = c; 
+	 }
+	 std::random_shuffle(assignments.begin(), assignments.end());
+
+	 for (int d = 0; d < 16; d++)
+	 {
+		 bzoombinis[d].col = positions[assignments[d]][0];
+		 bzoombinis[d].row = positions[assignments[d]][1];
+		 printf("Zoombini G%d, Z%d is at position (%d, %d).\n", (d+1), bzoombinis[d].ident, bzoombinis[d].col, bzoombinis[d].row);
+	 }
+
+
+}
 
 //bool BayouBoat::IsValidPlacement(const ZoombiniGroup, Zoombini) {}
 
